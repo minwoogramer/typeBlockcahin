@@ -60,3 +60,26 @@ const addings: Addd = (a, b, c?: number) => {
   if (c) a + b + c
   return a + b
 }
+//chelenge
+
+// Last 배열의 마지막값 리턴
+
+type Last = <T>(items: T[]) => T;
+
+const last: Last = (items) => items[items.length - 1];
+
+const lastItem = last([1, 2, 3, 4, 5]);
+
+console.log(lastItem);
+
+// Prepend 앞에있는값 리턴
+
+type Prepend = <T>(items: T[], item: T) => T[];
+
+const prepend: Prepend = (items, item) =>  [item, ...items]
+
+const items = [1, 2, 3, 4, 5];
+
+const newItems = prepend(items,0);
+
+console.log(newItems)
